@@ -22,4 +22,4 @@
  Ejemplo de valor a buscar: Phoenix
 
  User: 'user_id', 'name', 'review_count', 'yelping_since', 'useful', 'funny', 'cool', 'elite', 'friends', 'fans', 'average_stars', 'compliment_hot', 'compliment_more', 'compliment_profile', 'compliment_cute', 'compliment_list', 'compliment_note', 'compliment_plain', 'compliment_cool', 'compliment_funny', 'compliment_writer', 'compliment_photos', 'review_set'
- Ejemplo de valor a buscar: John
+ Ejemplo de valor a buscar: BUgmey6v6hZ1WfjbIhpVBg
