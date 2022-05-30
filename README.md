@@ -13,7 +13,7 @@
 
  En el caso de la clase Business, al presionar el botón de “filtros” también hay una opción adicional abajo de la caja de texto para sortear las instancias buscadas de manera descendente de acuerdo a sus estrellas.
 
- Atributos:
+ Atributos válidos para consultar:
  
  Business: 'business_id', 'name', 'address', 'city', 'state', 'postal_code', 'latitude', 'longitude', 'stars', 'review_count', 'is_open', 'attributes', 'categories', 'hours', 'review_set'
  Ejemplo de valor a buscar: Phoenix
