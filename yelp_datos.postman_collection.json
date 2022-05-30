@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "f8791c5e-593c-4fd5-8337-a4b4d24ddcec",
+		"name": "yelp_datos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Phoenix Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check city\", function(){\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data[0].attributes.city).to.eql(\"Phoenix\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2087/business/?filter%5Bsearch%5D=Phoenix",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2087",
+					"path": [
+						"business",
+						""
+					],
+					"query": [
+						{
+							"key": "filter%5Bsearch%5D",
+							"value": "Phoenix"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mexico City Kitchen Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check name\", function(){\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data).to.eql([]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2087/business/?filter%5Bsearch%5D=Mexico City Kitchen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2087",
+					"path": [
+						"business",
+						""
+					],
+					"query": [
+						{
+							"key": "filter%5Bsearch%5D",
+							"value": "Mexico City Kitchen"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function(){\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Check not found\", function(){\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors[0].status).to.eql(\"404\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2087/business/city=Phoenix",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2087",
+					"path": [
+						"business",
+						"city=Phoenix"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
