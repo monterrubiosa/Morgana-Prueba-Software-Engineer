@@ -9,11 +9,11 @@
 
  Arriba a la derecha, también hay un botón de “filtros”. Al ingresar ahí aparecerá una caja de texto con el botón “buscar” a un lado. 
 
- En esa caja se puede ingresar el valor de cualquier atributo (no numérico) de la clase y al oprimir “buscar” aparecerán las instancias deseadas.
+ En esa caja se puede ingresar el valor de cualquier atributo de la clase y al oprimir “buscar” aparecerán las instancias deseadas.
 
  En el caso de la clase Business, al presionar el botón de “filtros” también hay una opción adicional abajo de la caja de texto para sortear las instancias buscadas de manera descendente de acuerdo a sus estrellas.
 
- Atributos válidos para consultar:
+ Atributos:
  
  Business: 'business_id', 'name', 'address', 'city', 'state', 'postal_code', 'latitude', 'longitude', 'stars', 'review_count', 'is_open', 'attributes', 'categories', 'hours', 'review_set'
  Ejemplo de valor a buscar: Phoenix
