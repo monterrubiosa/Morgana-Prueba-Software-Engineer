@@ -1,0 +1,1267 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+
+      
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="NONE,NOARCHIVE" />
+      
+
+      <title>Review List – Django REST framework</title>
+
+      
+        
+          <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap.min.css"/>
+          <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/bootstrap-tweaks.css"/>
+        
+
+        <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/prettify.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/rest_framework/css/default.css"/>
+        
+      
+
+    
+  </head>
+
+  
+  <body class="">
+
+    <div class="wrapper">
+      
+        <div class="navbar navbar-static-top navbar-inverse"
+             role="navigation" aria-label="navbar">
+          <div class="container">
+            <span>
+              
+                <a class='navbar-brand' rel="nofollow" href='https://www.django-rest-framework.org/'>
+                    Django REST framework
+                </a>
+              
+            </span>
+            <ul class="nav navbar-nav pull-right">
+              
+                
+                  
+                
+              
+            </ul>
+          </div>
+        </div>
+      
+
+      <div class="container">
+        
+          <ul class="breadcrumb">
+            
+              
+                <li><a href="/">Api Root</a></li>
+              
+            
+              
+                <li class="active"><a href="/review/">Review List</a></li>
+              
+            
+          </ul>
+        
+
+        <!-- Content -->
+        <div id="content" role="main" aria-label="content">
+          
+
+          <div class="region"  aria-label="request form">
+          
+
+          
+            <form id="get-form" class="pull-right">
+              <fieldset>
+                
+                  <div class="btn-group format-selection">
+                    <a class="btn btn-primary js-tooltip" href="/review/" rel="nofollow" title="Make a GET request on the Review List resource">GET</a>
+
+                    <button class="btn btn-primary dropdown-toggle js-tooltip" data-toggle="dropdown" title="Specify a format for the GET request">
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      
+                        <li>
+                          <a class="js-tooltip format-option" href="/review/?format=vnd.api%2Bjson" rel="nofollow" title="Make a GET request on the Review List resource with the format set to `vnd.api+json`">vnd.api+json</a>
+                        </li>
+                      
+                        <li>
+                          <a class="js-tooltip format-option" href="/review/?format=api" rel="nofollow" title="Make a GET request on the Review List resource with the format set to `api`">api</a>
+                        </li>
+                      
+                    </ul>
+                  </div>
+                
+              </fieldset>
+            </form>
+          
+
+          
+            <form class="button-form" action="/review/" data-method="OPTIONS">
+              <button class="btn btn-primary js-tooltip" title="Make an OPTIONS request on the Review List resource">OPTIONS</button>
+            </form>
+          
+
+          
+
+          
+
+          
+            <button style="float: right; margin-right: 10px" data-toggle="modal" data-target="#filtersModal" class="btn btn-default">
+              <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+              Filters
+            </button>
+          
+
+          
+          </div>
+
+            <div class="content-main" role="main"  aria-label="main content">
+              <div class="page-header">
+                <h1>Review List</h1>
+              </div>
+              <div style="float:left">
+                
+                  <p></p>
+                
+              </div>
+
+              
+                <nav style="float: right">
+                  <ul class="pagination" style="margin: 5px 0 10px 0">
+  
+    <li class="disabled">
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+  
+
+  
+    
+      
+        <li class="active">
+          <a href="http://localhost:2087/review/">1</a>
+        </li>
+      
+    
+  
+    
+      
+        <li>
+          <a href="http://localhost:2087/review/?page%5Bnumber%5D=2">2</a>
+        </li>
+      
+    
+  
+    
+      
+        <li>
+          <a href="http://localhost:2087/review/?page%5Bnumber%5D=3">3</a>
+        </li>
+      
+    
+  
+    
+      <li class="disabled">
+        <a href="#"><span aria-hidden="true">&hellip;</span></a>
+      </li>
+    
+  
+    
+      
+        <li>
+          <a href="http://localhost:2087/review/?page%5Bnumber%5D=3048">3048</a>
+        </li>
+      
+    
+  
+
+  
+    <li>
+      <a href="http://localhost:2087/review/?page%5Bnumber%5D=2" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  
+</ul>
+
+                </nav>
+              
+
+              <div class="request-info" style="clear: both" aria-label="request info">
+                <pre class="prettyprint"><b>GET</b> /review/</pre>
+              </div>
+
+              <div class="response-info" aria-label="response info">
+                <pre class="prettyprint"><span class="meta nocode"><b>HTTP 200 OK</b>
+<b>Allow:</b> <span class="lit">GET, POST, HEAD, OPTIONS</span>
+<b>Content-Type:</b> <span class="lit">application/vnd.api+json</span>
+<b>Vary:</b> <span class="lit">Accept</span>
+
+</span>{
+    &quot;links&quot;: {
+        &quot;first&quot;: &quot;<a href="http://localhost:2087/review/?page%5Bnumber%5D=1" rel="nofollow">http://localhost:2087/review/?page%5Bnumber%5D=1</a>&quot;,
+        &quot;last&quot;: &quot;<a href="http://localhost:2087/review/?page%5Bnumber%5D=3048" rel="nofollow">http://localhost:2087/review/?page%5Bnumber%5D=3048</a>&quot;,
+        &quot;next&quot;: &quot;<a href="http://localhost:2087/review/?page%5Bnumber%5D=2" rel="nofollow">http://localhost:2087/review/?page%5Bnumber%5D=2</a>&quot;,
+        &quot;prev&quot;: null
+    },
+    &quot;data&quot;: [
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;BUgmey6v6hZ1WfjbIhpVBg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;BUgmey6v6hZ1WfjbIhpVBg&quot;,
+                &quot;user_id&quot;: &quot;WS95iyoiDkbLGeHtERa1-A&quot;,
+                &quot;business_id&quot;: &quot;1SWheh84yJXfytovILXOAQ&quot;,
+                &quot;stars&quot;: 1,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Don&#x27;t go here if you expect consistent or reasonable hours for the driving range.  It&#x27;s clear the goal for the owners of this course is to hammer down their expenses without any concern for the customer.&quot;,
+                &quot;date&quot;: &quot;1443052943000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;HFUFnkhInL3xwdUnONJ6AA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;HFUFnkhInL3xwdUnONJ6AA&quot;,
+                &quot;user_id&quot;: &quot;Gjj9cj_EsFgwmn-jrjJfeQ&quot;,
+                &quot;business_id&quot;: &quot;1SWheh84yJXfytovILXOAQ&quot;,
+                &quot;stars&quot;: 5,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Absolutely  gorgeous facility. Golf course was well maintained. Great view of the surrounding area.&quot;,
+                &quot;date&quot;: &quot;1427415698000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;6W0MQHmasK0IsaoDo4bmkw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;6W0MQHmasK0IsaoDo4bmkw&quot;,
+                &quot;user_id&quot;: &quot;2K62MJ4CJ19L8Tp5pRfjfQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 3,
+                &quot;funny&quot;: 2,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;My girlfriend and I went for dinner at Emerald Chinese after a Thursday night workout.\n\nWe arrived around 7:30pm and were seated after a short wait.  After browsing the menu and a brief discussion with our waiter, we ordered seafood noodles and a 3 item mix meat plate (BBQ pork, chicken, and duck)\n\nThe food came soon thereafter and it was hot and delicious.  There was large portions and lots of seafood in the seafood noodles and the mix meat plate came with good cuts of meat and the correct sauces.\n\nAfter the meal, we received fortune cookies for dessert.\n\n\nFood\nThe food was good quality.  Ingredients tasted fresh and dishes tasted well made.  Food is above average but nothing stood out even though I was quite hungry.\n\nPrice\nPrice is high in comparative to other Chinese cuisine, and comparable to large western restaurant chains.\n\nService:\nThe service is average to slightly below average.  A common malaise of chinese restaurants is poor service where the waiter/waitresses are overworked, impatient, unattentive.  Emerald Chinese is no exception.  The waiting staff at the restaurant appear rushed and impatient.  All our services needs were met, but the staff was rushed and grumpy..\n\nDecor\nEmerald has tasteful decorations, comfortable chairs and nice tablecloths.  There is sufficient room to navigate between tables.\n\n\nOverall, we had a good meal with large portions, received average service and paid slightly more than we had hoped for our meal.\n\n3.1 / 5.0&quot;,
+                &quot;date&quot;: &quot;1485554070000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;BeeBfUxvzD4qNX4HxrgA5g&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;BeeBfUxvzD4qNX4HxrgA5g&quot;,
+                &quot;user_id&quot;: &quot;A0kENtCCoVT3m7T35zb2Vg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;We&#x27;ve always been there on a Sunday so we were hoping that Saturday dim sum would be less busy. No such luck. We were surprised that some of the dishes were cold because it was so packed; I could understand if it was empty and the carts weren&#x27;t circulating but every table was full. It took a while to get drinks and other items (napkins). The dishes were not of the same quality as they had been on other visits, but they were acceptable.&quot;,
+                &quot;date&quot;: &quot;1372115490000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;A1D2kUnZ0HTroFreAheNSg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;A1D2kUnZ0HTroFreAheNSg&quot;,
+                &quot;user_id&quot;: &quot;SuOLY03LW5ZcnynKhbTydA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;***No automatic doors, not baby friendly!*** I frequent this Chinese restaurant before and post partum. Dim sum is ok, dishes at dinner time are huge, service is great, BUT there are no automatic doors! How am in supposed to push my stroller inside?!!!&quot;,
+                &quot;date&quot;: &quot;1451912362000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;RHhlmL07evgAdPaXQV8Omg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;RHhlmL07evgAdPaXQV8Omg&quot;,
+                &quot;user_id&quot;: &quot;6vU0I5XgCv9OQHZ76rV6qw&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 2,
+                &quot;text&quot;: &quot;One of the gauges of a good Chinese restaurant is the number of Chinese people who patronize the place. Emerald Chinese Restaurant has a lot of patrons.\n\nMy wife and I mainly come for the dim sum  brunch (9:00 AM ~ 11:00 AM) on weekends. The food is great, the place is clean, and there is ample parking around the restaurant. From within the restaurant, you can easily see outside as three of the four walls are made of glass. This gives the place a sense of airiness that some places we go to do not.\n\n*The ideal time to come on weekends is between 10:00 AM and 11:00 AM. Come before 10 AM and not all the food is available yet. Come after 11 AM, expect to fall in line. \n\nThe staff is efficient, but do not expect a lengthy conversation. For a place like this, this is not a put down. It&#x27;s what I expect.\n\nThe quality of the dim sum is comparable to what you&#x27;d get in a good Hong Kong dim sum restaurant. The hot food is mostly brought out in steamer carts which means that it reaches your table hot and fresh. Fried foods and dessert items do not come in the steamer carts. The turnaround is pretty quick (a food cart seems to be depleted every two rounds of the tables) so very seldom is the food going around for too long. My personal favorites are the sweet pork - served either in a steamed bun or in flaky pastry, chicken feet, shrimp - served in a dumpling or the white rice wrap, pork and century egg congee, and the douhua (silken tofu) with syrup. My wife loves the giant oyster served on its shell with garlic and glass noodles.\n\nThere may be a few fancier places out there but if fancy is not that important to you, then this place is difficult to beat.&quot;,
+                &quot;date&quot;: &quot;1300718395000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;TD5E5NTFqgi1LPbTLlRCjQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;TD5E5NTFqgi1LPbTLlRCjQ&quot;,
+                &quot;user_id&quot;: &quot;-ga7pQvnJcMB1_pIapHQRQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;We chose this restaurant for our Chinese New Year dinner. The menu has a wide variety of dishes. The service was par. We order the pre fix menu and some side dishes . The waiter was at first not acoomendating but after a discussion with my dad they agreed on what we asked for. The food was mediocre to good. Most dishes were hot and tasty besides a few that were a bit salty. Overall the experience was good.&quot;,
+                &quot;date&quot;: &quot;1424131802000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;4Sg_ziTcrYlGO0dVyj2V3g&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;4Sg_ziTcrYlGO0dVyj2V3g&quot;,
+                &quot;user_id&quot;: &quot;agqWketq-FhYwVmRyli4jA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 1,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;I went at 230 on a Monday. It was dimsum \n\nI hated every second I was there, the carts were going around but the ladies kept ignoring us and I don&#x27;t understand why. \n\nwe got gar how &amp; a spinach dumpling. \n\nAfter that not a single cart were go by and we sat for so long till I finally I gave up \n\nwe went to pay and it was 14$ which is soooo high for what we got ...... \n\nI&#x27;ll never ever go back ..\n\n.. food was good though&quot;,
+                &quot;date&quot;: &quot;1483389149000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;PNF0KXB9-RJMveiLvgkASw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;PNF0KXB9-RJMveiLvgkASw&quot;,
+                &quot;user_id&quot;: &quot;02AgiiwLg_XAhkvG-wGZKQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;My family and I were at Emerald yesterday during the busiest point of dim sum traffic. All I can say is, it is total mayhem. There weren&#x27;t any lines during the time we were there, but I believe that is because they churn through customers in a manner I have never seen before. The tables are smooshed together to get as many in and out quickly. I can&#x27;t really blame them, I get it. When you have a good thing, capitalize on it. Though, this atmosphere creates a bit of a frantic assembly line feel that I don&#x27;t particularly find enjoyable.\n\nThere is no denying that the food at Emerald is pretty good. When it comes to dim sum, they stand out among the rest as they offer way more options than any other restaurant. Their offerings are unique and plentiful in size but not in overall temperature of dish. Only 1 of the dishes we received were actually the temperature it needed to be. Again, a symptom of the style of restaurant. \n\nService was perfunctory at best. Cart servers were like street corner merchants hawking their wares. Actually placing items on the table while explaining why you simply needed to have it (in as few words as possible).\n\nOverall, 3 stars is being a little more generous than I should be. But the food is actually not bad.&quot;,
+                &quot;date&quot;: &quot;1453139379000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;ijWqxLnjOo9LZpxOVGgCnw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;ijWqxLnjOo9LZpxOVGgCnw&quot;,
+                &quot;user_id&quot;: &quot;paYZw5wsS25IzzBZtijB8A&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Because we are in Mississauga, I think this place is pretty good compare to other dim sum places around the area. Me and my family used to come here a lot, but nowadays we all so busy that we come here less.\n\nThe dim sums here aren&#x27;t as fancy as the one in Mississauga China Town, but I don&#x27;t mind the look. I just mind about the taste.\n\nTips: only a few dim sum need to order. Most of them are pushed out.&quot;,
+                &quot;date&quot;: &quot;1440041505000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;XhiI-xp5px7y4LD6MwVq_w&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;XhiI-xp5px7y4LD6MwVq_w&quot;,
+                &quot;user_id&quot;: &quot;nCqOSH2I6-k93B04FwouIA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 2,
+                &quot;cool&quot;: 2,
+                &quot;text&quot;: &quot;Whenever I go here on the weekend, this place is super busy.  Expect to wait about 30 minutes for a table.  This place is also mutli-ethnic.  You will see people of all different races coming here.  This place is one of the chinese dim sum restaurants that white people like to come to.  \n\nThe food is decent, but it is pricey.  You can find much cheaper dim sum places elsewhere, but if you don&#x27;t speak chinese you will be more comfortable coming here. \n\nSometimes, depending on what time you come here, there will be barely any food coming around. \n\nDerek&quot;,
+                &quot;date&quot;: &quot;1290471718000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;OYFb7vlzXWgz-Z_iYaQGMA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;OYFb7vlzXWgz-Z_iYaQGMA&quot;,
+                &quot;user_id&quot;: &quot;U-L3aXEkYzDX5J8w8lLbCQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Came on a weekday morning with bf to avoid the weekend crowds and we definitely enjoyed our experience here\n\nFood: 5/5\nOrdered a bunch our staples: lotus leaf wrapped sausage and sticky rice, preserved egg congee, egg yolk bun. And they were all pretty bomb!\nEmployees were walking around with carts full of dim sums. Super Cantonese style\nSome items in the cart are off the menu\n\nService: 5/5\nSuper friendly and funny staffs.Willing to explain everything despite the language barrier.\n\nEnvironment: 3/5\nBit outdated\nLobby and washroom are particularly sketchy\n\nOverall 4/5, will return!\nAnd we were told on weekends, there are a more variety of dim sums&quot;,
+                &quot;date&quot;: &quot;1463795052000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;_Hr9z8pJ5nZSf7FS1O8ujw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;_Hr9z8pJ5nZSf7FS1O8ujw&quot;,
+                &quot;user_id&quot;: &quot;R-xGsTpwlwuOe_vAbg_aeA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;Despite the poor service here, my family comes here for special occasions because the quality of their dishes is pretty decent. There is a wide variety of dishes and you can also order a 10-course meal if you&#x27;d like. The dim sum menu is also very selective.\n\nBut as mentioned the service is terrible! You&#x27;ll expect to wait 20-30 mins for your food especially if you come with a large group. I know you cant expect good service from an asian restaurant but I&#x27;m used to the quick eat in and out type of meal and it&#x27;s definitely subpar service here! The waiters are also not very friendly and give you attitude when you ask when your food is coming.\n\nI only give this restaurant 2 stars because the ambience of the restaurant is nice and the quality/selection of food is good.&quot;,
+                &quot;date&quot;: &quot;1424752378000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;j9xTUEolkpMI50WOLvUEAg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;j9xTUEolkpMI50WOLvUEAg&quot;,
+                &quot;user_id&quot;: &quot;Y598FH7fNMq45DkVSbN0DA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;The dimsum here is actually alright. Food was good relative to its price. Servers were nice despite language barriers. Nicely lit and seemingly tidy/clean environment, with beautiful decor. Wasn&#x27;t the best dimsum I&#x27;ve tasted, but it was good.&quot;,
+                &quot;date&quot;: &quot;1485675092000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;Trb6SxeyGqzHHZtbqLKpZw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;Trb6SxeyGqzHHZtbqLKpZw&quot;,
+                &quot;user_id&quot;: &quot;KmHtoogKhK-ID7FWGOPvag&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;This is one of the few bigger chinese restaurants in mississauga. They have solid good food. Although in recent visits, the service has been lacking... \nMy family and I always come here for birthdays, holiday and recently Chinese New Year dinner. \n\nIn those few times, the service of our food has taken a very long time. The food does not arrive until 20-30 minutes after ordering. Not only that but they did not provide the starter soup. \n\nWhen we question the servers about the wait time, we received some lip. It was only when the managers came to serve us the service was a bit better. \n\nEmerald overall is a great restaurant, but next time we might take our family business elsewhere!&quot;,
+                &quot;date&quot;: &quot;1424143127000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;kni1Q2VAuZna3p0Jop1YzA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;kni1Q2VAuZna3p0Jop1YzA&quot;,
+                &quot;user_id&quot;: &quot;o_DeoZ0Ogu32D18cgEDkbA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 2,
+                &quot;text&quot;: &quot;Good dim sum, not too expensive, out in Mississauga but worth the trip. \n\nOur family spent many Sunday brunches here and I always love going with a big group so we can order a larger variety.\n\nI think it&#x27;s consistently good, not consistently great but good and clean and busy which means the food is usually fresh. When I lived in Taipei we would never eat anywhere where there wasn&#x27;t a wait because that meant the food usually sat around. Which is a policy I usually stick to for Chinese Restaurants. \n\nI&#x27;m giving it 4 stars mainly because if I want dim sum in Toronto it&#x27;s usually the place I think of first. But really maybe it should be 3.5?\n\nNot sure about the service or non-dim sum menu so this review is just for dim sum.\n\nI like anything with bbq pork, especially the bbq pork wrapped in thin sheets of rice noodle, and baked bbq pork buns. I also love the rice noodles with a side of xo sauce, wrapped sticky rice, Chinese broccoli and deep fried sticky rice ball with sesame or red bean paste and egg tarts for dessert.\n\nNot sure how useful these descriptions are because I only know the Chinese names so I&#x27;m describing the dishes... sorry but if you&#x27;ve been to dim sum before you might be able to figure it out. Next time I go I&#x27;ll try to update the names.&quot;,
+                &quot;date&quot;: &quot;1294959537000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;MhuRz9wWERmap05ECZKsYw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;MhuRz9wWERmap05ECZKsYw&quot;,
+                &quot;user_id&quot;: &quot;7DBDjEN6SnVgLe5zWOe-FA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Traditional and authentic Dim Sum!!! I couldn&#x27;t believe I walked in a 3pm on a weekday and there were carts full of dim sum!!! Lots to choose from and new dumplings I never tried! Mighty impressed by taste but when the bill came I was shocked!! $30 for 5 items. Ah, well, ya live once! I&#x27;m going back!&quot;,
+                &quot;date&quot;: &quot;1532643810000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;xIiX1MXo9SMFNbJ7gOuGog&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;xIiX1MXo9SMFNbJ7gOuGog&quot;,
+                &quot;user_id&quot;: &quot;79Oujo22kxeFf_d9sz1F3g&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;This is the second time I&#x27;ve ever been here and I was quickly reminded why I didn&#x27;t come back after the first time. I came on a weekend after the lunch rush so the restaurant wasn&#x27;t busy at all. Most of the dim sum I ordered I noticed was just pulled from a sitting cart so it needed to be warmed up - I believe they had to microwave it! The food is normal. You can get the same taste and quality type food at other dim sum restaurants and pay literally half the price. Some dim sum items are $6 a plate which I don&#x27;t think is justifiable at all when I can get the same dish and portion size elsewhere for half the cost. I almost fell off my chair when my $70 bill for 2 people arrived at the table. I won&#x27;t be returning here and wouldn&#x27;t recommend my friends to go here. It&#x27;s way overpriced.&quot;,
+                &quot;date&quot;: &quot;1515680137000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;_qJ9rMhcgjKQq-4vxVrI5A&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;_qJ9rMhcgjKQq-4vxVrI5A&quot;,
+                &quot;user_id&quot;: &quot;fQk7tJKxXhc9S8vEZwRYCA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Food is really good, the place is super busy during the weekend. I love it. Remembers me China :)\n\nBut I find the price too high for what it is. I still highly recommend this place.&quot;,
+                &quot;date&quot;: &quot;1463787030000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;0XEFiYDD7cbL0KiUFEbJng&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;0XEFiYDD7cbL0KiUFEbJng&quot;,
+                &quot;user_id&quot;: &quot;g9xWuPtBrZ7ajjESXHgQYg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;We saw that the rating was not that high, but decided to stop by anyways. A lot of Chinese restaurants with great food but poor service often suffer on yelp ratings, but the food here was not good enough to balance out the bad service.\n\nWe got there at around noon on a weekday and it was pretty full. It took a few minutes for someone to seat us. We ordered some dishes from the carts but realized we had no utensils. It took about ten minutes for us to wave someone over to bring us some. Although the guy who seated us asked us what tea we wanted, he never brought it by and it took another ten or so minutes for us to get someone&#x27;s attention.\n\nWe got beef changfen, shrimp dumplings, spinach moon dumplings, curry octopus and meatballs. The skin on the dumplings and changfen was soft but too thick for the amount of filling inside. The meatballs were flavorful but not very tender. Only the octopus had both flavor and texture.&quot;,
+                &quot;date&quot;: &quot;1467744107000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;MiH7vIJPxuX2NQjCj6Mcjw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;MiH7vIJPxuX2NQjCj6Mcjw&quot;,
+                &quot;user_id&quot;: &quot;ytEi22nfhGNHZxfzLRRj3w&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 1,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;My family(15+ ppl) and I came yesterday to celebrate a baptism and my birthday. We got there and the reservation was under my uncles&#x27; name and they already choosed and paid for the dishes they selected for each table.  The waitress was badgering us appetizers/soups but we didn&#x27;t know that it was extra.... most of it didn&#x27;t taste really good especially the tripe/liver which made me gag.The basic Chinese food like the sizzling beef, mushrooms, chow mein was really good though. However, the lack of customer service pissed me off. My relative was going to pay but the amount of money they charged was crazy and they added dishes we didn&#x27;t even have; the manager literally got up in my uncle&#x27;s face yelling at him and his wife and made her cry by telling them that they&#x27;re going to call the police. That is not how you treat a customer.  We are never going back because of how we were treated. Overall: the food gets a 3/5 and customer service gets -2/5. I hope they don&#x27;t treat other customers like that.&quot;,
+                &quot;date&quot;: &quot;1518415850000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;gJxfIV-zBJvbJQjFs9SMJw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;gJxfIV-zBJvbJQjFs9SMJw&quot;,
+                &quot;user_id&quot;: &quot;0mjFS4eWKJCYwBwO7DU8jw&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;I would say Emeralds has worsen over a period of few months, honestly, the service here was never the greatest, but now it has gotten to the point where the employees barely know any english! \n\nAlso, they served us with dumplings that have gone bad, and were very sour in taste.  Meh, I wouldn&#x27;t really care however, they charged us for it?!? So I have to pay to eat dumplings that may prove to be a health concern?  \n\n...At least the washrooms were clean... :P&quot;,
+                &quot;date&quot;: &quot;1381014669000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;BudsQ3Tt4XRr-zgFjJrTFg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;BudsQ3Tt4XRr-zgFjJrTFg&quot;,
+                &quot;user_id&quot;: &quot;zWWcik1fRPZviBCQLC26FQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;I usually really like the dim sum here but my lunch here yesterday was a real letdown. We came right before 2pm so maybe the timing something to do with it but I&#x27;m told their dim sum is on till 4pm.\n\nThe har gow was the worst I&#x27;ve ever had, and I rarely get to say that about har gow. The shrimp was tiny, rubbery, and it tasted \&quot;off\&quot;. I was just glad we didn&#x27;t get sick off it. It tasted completely different from how they used to do it here so I&#x27;m not sure if they used a bad batch, but if so it shouldn&#x27;t have been served in the first place. Another staple, the shiu mai, was also pretty bad. It was tasty usually but it was tiny and I&#x27;m not sure if it had any fish egg topping either. If it did, it wasn&#x27;t noticeable. The shiu mai here used to be huge but it seems the owner is shrinking it every single year. Even the bbq pork rice roll was disappointing, there were tiny slivers of bbq pork in it. We also ordered some fried pork &amp; veggie dumpling that was actually served to us cold. The lady pushing the cart never bothered to heat it back up for us I guess. Stuff like this should be basic! The only dishes I liked were the steamed choy sum with oyster sauce. The xiao long bao was also decent.\n\nOverall, it seems like they&#x27;re skimping on everything that costs money now. Despite that, prices are higher than other dim sum spots. That&#x27;s not a good combination. I hope the owner recognizes this soon because it&#x27;d be a shame for one of the few good dim sum spots in the city to keep on this path.&quot;,
+                &quot;date&quot;: &quot;1468790616000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;fMeZdr4RkMDCWUqwLKOboA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;fMeZdr4RkMDCWUqwLKOboA&quot;,
+                &quot;user_id&quot;: &quot;kxXr01bsJDQ_OdNWVZafGA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;This is THE place for Dim Sum in Mississauga. Don&#x27;t despair if you see a huge line up at the door on weekends, things move quickly. There is no rhyme or reason to the hostess numbering system...so just wait your turn knowing that it is going to be great food. The food is cooked in steamer baskets and walked around the restaurant on carts. Someone at your table has to take the key ordering position so as to flag down the cart and get the food on the table. The food runs out quickly, so don&#x27;t wait for it to come around again, it may be a while or never! They do a great job with the staple DS fare: Har gow (shrimp dumplings), Shui Mai (pork) and sticky rice. My personal favourite is the scallops with garlic sauce. Try the Chinese greens, dumpling soup, and pork sesame seed buns. The spring rolls ( with meat filling) are awesome as well.\nThe best time to go is just before noon on weekends or on weekdays. Anytime after 2:00 p.m. is pointless as they will be out of most food items.&quot;,
+                &quot;date&quot;: &quot;1333676884000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;jSFRMgPQ1npwqROk3ACRZw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;jSFRMgPQ1npwqROk3ACRZw&quot;,
+                &quot;user_id&quot;: &quot;_1Ol88yKJobuU81JElTlaw&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 5,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;this place is the best place to get dim sum ! the food is delicious and the staff is always welcoming and attentive to our needs, the only thing im not crazy about it the washrooms, and anyone who knows me knows I like to see how clean a place is based on the cleanliness of their bathrooms&quot;,
+                &quot;date&quot;: &quot;1368320449000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;ollLRps2VXcsuqb1r_UcCQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;ollLRps2VXcsuqb1r_UcCQ&quot;,
+                &quot;user_id&quot;: &quot;skxAQWpAe1VL_3F4pxqK2A&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 6,
+                &quot;funny&quot;: 6,
+                &quot;cool&quot;: 6,
+                &quot;text&quot;: &quot;I used to work in Oakville, if co-workers and I wanted dim sum, this is the only place that&#x27;s reasonably close AND offers decent food. \n\nMy Dim Sum SSQSW: \n\nServe Style -- push cart. I would have preferred ordering from a menu, but co-workers who aren&#x27;t dim sum regulars like the push-cart style so they can peek before ordering \n\nSelection -- good, aplenty on seafood dishes (steamed shrimp dumpling, steamed shrimp with chives dumpling, fried shrimp dumpling, fried shrimp with chives dumpling, .... you get the gist). They have all the usual suspects for dim sum. \n\nQuality -- okay. Because it&#x27;s always busy, we&#x27;ve not had un-fresh food. \n\nService -- so so. I think they try to be efficient, if not warm and attentive. The servers are always in such a rush, who&#x27;s got time to smile at or chat with you?! If you want something, just be assertive and flag someone down (in a polite way). \n\nWait Time -- avoid 11:45 - 12:45 peak lunch time. Otherwise finding a parking and getting a table will taste your patience.&quot;,
+                &quot;date&quot;: &quot;1298253375000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;Xob5FlJ_HINMHAzmnfcu-Q&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;Xob5FlJ_HINMHAzmnfcu-Q&quot;,
+                &quot;user_id&quot;: &quot;0BBUmH7Krcax1RZgbH4fSA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 5,
+                &quot;funny&quot;: 6,
+                &quot;cool&quot;: 5,
+                &quot;text&quot;: &quot;I&#x27;m writing this update based on the lunch I had here today. \n\nI&#x27;m so annoyed that the service is so incredibly rude. I can understand that they might be busy, and need to move fast. Sometimes they respond to me, but they look the other way, I&#x27;m okay with that too. \n\nBut today we went, and I would ask people for tea, and cutlery and things, and they would put a grump face and storm away, only to come back with the minimal amount of things. \n\nI mean, we asked for hot sauce, and he just  violently squeezed hot sauce in everyone&#x27;s bowls! I was shocked, and then so I asked for more bowls. And he stomped off and brought me just one bowl. (What about everyone else)\n\nSome other servers are quite nice. If you need anything, try to flag down the guy in the suit/tie or the ladies in the black blazers. Anyone else will just throw things at you (figuratively)\n\nThey also again, tried to put stuff on our table, and I had to tell them to take it back. When she was confused what i wanted, I got yelled at. \n\nI think if you are a regular and they get to know you the service would be better. It would be the managers serving you, not the others. \n\nNonetheless, the place is always packed full of the local asian folk, which is a good thing. I can understand why, it&#x27;s cheap, and the food is quite decent (they can cook the short ribs a bit more).  This time with 5 people, we paid $11 a person. \n\nIf it wasn&#x27;t for the only dim sum place in proximity, and my co-workers loving it so much, I wouldn&#x27;t come back. \nI really don&#x27;t need to be treated like a 2nd class citizen.&quot;,
+                &quot;date&quot;: &quot;1286998184000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;7oQeR5ttXM3jhwmo802WpQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;7oQeR5ttXM3jhwmo802WpQ&quot;,
+                &quot;user_id&quot;: &quot;6HN4_3SNCjCZuF2mybb3Pw&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 2,
+                &quot;text&quot;: &quot;Years ago, they were great.  Not much of a fan of their food anymore.  I don&#x27;t go for dim sum, but rather actual dinners.  Haven&#x27;t been impressed with their cost as it seems to be rising, despite being busier than I can ever remember.&quot;,
+                &quot;date&quot;: &quot;1291705154000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;XjfMSzN1QHceptanusx7DA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;XjfMSzN1QHceptanusx7DA&quot;,
+                &quot;user_id&quot;: &quot;WVTxk0-DxPKJ7TckvUx_dA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Came at 11ish AM on a Saturday, and didn&#x27;t really have to wait for a table.\n\nStandard dim-sum service. Really nothing much else to say. Environment is quite nice though for a dim-sum place. Also it&#x27;s cart-service.&quot;,
+                &quot;date&quot;: &quot;1414952910000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;huFtyzqwFurB5634_vMK6w&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;huFtyzqwFurB5634_vMK6w&quot;,
+                &quot;user_id&quot;: &quot;PGeiszoVusiv0wTHVdWklA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;My family has been going here off and of for probably close to 10 years.  I&#x27;m almost certain it has changed owners during that time.  Anyhow, we generally try not to come here as it&#x27;s not a great Chinese restaurant but it&#x27;s one of the very few Chinese restaurants that can hold a large group.  \n\nWe arrived with a table of 10 and we had reservations.  After being confused why we were told we had a 40 minute when we had reservations, we finally sat down after talking to the head hostess for 20 minutes.  This didn&#x27;t start off our meal on the right foot,\n\nWe choose a smaller &#x27;banquet&#x27; meal for 8 and supplemented with a few other dishes since we didn&#x27;t like the really big banquet dinners.  The typical complimentary soup came out and the service was clearly not interested in &#x27;service&#x27;.  The soup spilled all over the place when it was taken from the serving bowl to the smaller bowls.  This behaviour continued throughout the meal.  Most dishes were just thrown onto the table while the waiter often just pushed people aside to get to the centre of the table.  The only thing that saved the meal were the dishes.\n\nThough they weren&#x27;t outstanding or great.... all the dishes were fairly well executed.  Nothing was greasy, oily, underseasoned, overseasoned, or burnt.  Steamed fish was fresh and light.  Chicken was cooked perfectly and moist.  Vegetables were nicely flavoured and still crispy.  The lobster could be better... it was on the scrawny side and it was hard to find any meat in there.  All in all ... nothing horrible among the 10 dishes we ordered.  \n\nIn comparison to the east end, this restaurant is probably just average but since we&#x27;re in Mississauga, it stands to be one of the better ones.  It&#x27;s too bad we don&#x27;t have a great Mississauga Chinese restaurant.&quot;,
+                &quot;date&quot;: &quot;1347660904000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;PCB93GGc9Wk5h5YU75bSsA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;PCB93GGc9Wk5h5YU75bSsA&quot;,
+                &quot;user_id&quot;: &quot;CmahoXBP17HudYGYt2Brdg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;Very busy on weekends, but definitely more food and cart options then during the weekdays, when you won&#x27;t catch yourself in line. Good food, the only Dim Sum in Mississauga with Sweet and Sour Pork Feet w/ Eggs (sounds gross, but its believed to be very nutrional, as the Vinegar in the soup helps purify the blood).&quot;,
+                &quot;date&quot;: &quot;1395205607000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;KNlfXZluHGyZj_TdsOEVuQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;KNlfXZluHGyZj_TdsOEVuQ&quot;,
+                &quot;user_id&quot;: &quot;zWWcik1fRPZviBCQLC26FQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 5,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;This is probably the most underrated restaurant on Yelp in Mississauga. Largely because of all the 1 star reviews for poor service. Despite this, the place constantly has line ups for their dim sum so they must be doing something right. I&#x27;ve honestly never had a bad dim sum dish here. Har gow, beef balls, sticky rice, lotus leaf rice, shiu mai, tofu with crab meat, congee, pig feet, etc.. Everything is great. The service is... plain spoken and frantic but that&#x27;s dim sum for you. It&#x27;s certainly not worse than other similar restaurants.&quot;,
+                &quot;date&quot;: &quot;1451242648000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;BNsBq4byFfad32HJ2CnuGA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;BNsBq4byFfad32HJ2CnuGA&quot;,
+                &quot;user_id&quot;: &quot;surYJl8z-WOxqroyYgvmYg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;We used to go here quite a bit for dim sum, but lately we&#x27;ve been going elsewhere.  Today we found ourselves there for a last minute family dim sum brunch.  I was reminded of why we don&#x27;t really go there anymore...\n\n1)  The layout: Depending on where you sit, you may get hot dim sum fresh off the carts, or you may get that cart that has \&quot;onesies\&quot; of everything left over....which implies you may have to wait quite awhile for that one item you&#x27;ve been jonesing for.  You could order it too, but that can take some time.  \n\n2)  The quality:  Sometimes it&#x27;s good, sometimes it&#x27;s meh.  It&#x27;s rarely excellent. \n\n3)  The wait:  OMGoodness.  On a Sunday morning at noon, you can expect a hefty wait especially if you&#x27;re in a group larger than 4.  I don&#x27;t even attempt Saturday morning.  I&#x27;d have to assume that the rush dies down after 2 pm but don&#x27;t quote me on that!\n\nI&#x27;d say it&#x27;s a good place to go if you&#x27;re a dim sum newb and you like to see the items before you order them.  But otherwise there are better options out there.&quot;,
+                &quot;date&quot;: &quot;1392003693000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;7PHMFeSTOuoKDXY0C4iaHw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;7PHMFeSTOuoKDXY0C4iaHw&quot;,
+                &quot;user_id&quot;: &quot;Qb8sDTzr54wRtT9hm1ZBCg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 5,
+                &quot;funny&quot;: 2,
+                &quot;cool&quot;: 2,
+                &quot;text&quot;: &quot;This place is a hidden gem in Mississauga!  It might look a little rundown on the outside and the foods were absolutely legit and authentic.  Dim sum was outstanding; my family and I technically had stayed in Toronto for 4 days and we had dim sum over here twice already!  Yes, it was that good!  Presented with a wide variety of dim sum, savory and sweet, from the steamed buns to baked sago pudding dessert, wish I had more room in the stomach!  Dinner was not super duper but prices were reasonable and foods were not bad at all.&quot;,
+                &quot;date&quot;: &quot;1510437765000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;bPmjgrWtTybqFupZiCVkng&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;bPmjgrWtTybqFupZiCVkng&quot;,
+                &quot;user_id&quot;: &quot;3uwcea9F-Q1b-u9p8II5xg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 1,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Have been there many times for dim sum and was always great. First time for dinner and the service was so bad!! Will not be back. \n\nGlasses were dirty with food stuck on them and fingerprints everywhere. Pretty scary. \n\nFelt like it was such a hassle to have us eat there. The wait staff constantly reach over you to serve or take away things from the table. It was an experience I won&#x27;t forget anytime soon&quot;,
+                &quot;date&quot;: &quot;1511496912000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;uvB4-V7VK1ZVGzdpXMnbRQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;uvB4-V7VK1ZVGzdpXMnbRQ&quot;,
+                &quot;user_id&quot;: &quot;hyvR2B4uxhHtx3WifjgsjQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;I have dined a few times for dim sum and dinner.  I like their menu as there is traditional Chinese dishes and unique dishes.\n\nThey have set menus for dinner which have a nice variety.  The food always taste good, but sometimes the service is good and sometimes not so much.\n\nI would return again as the food keeps me coming back.&quot;,
+                &quot;date&quot;: &quot;1422079121000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;aMS8yu-NuSQWFsZPU9AsZw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;aMS8yu-NuSQWFsZPU9AsZw&quot;,
+                &quot;user_id&quot;: &quot;22dQwG25J7BK56sLIFqwEA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Their dim sum is a bit pricier compared to other places but their spring rolls have got me hooked!&quot;,
+                &quot;date&quot;: &quot;1390589399000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;DF6ri11YXSHlKluoyXDdKw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;DF6ri11YXSHlKluoyXDdKw&quot;,
+                &quot;user_id&quot;: &quot;TjsBbWAfwxWEXPxaLNv5SQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;This place has pretty good food, iv never had a bad time here. Good portions, good taste. It is a tad pricey tho, if i might add. I come here all the time so I guess iv gotten used to the pricing. They open late almost every night, they close at 1 for most nights I think. Staff is friendly, but most of them don&#x27;t speak alot of English, but there&#x27;s one who speaks good English tho. I just don&#x27;t like the washrooms or the hallway to the washroom, looks sketchy. There&#x27;s fish tanks with crab and other seafood...alive tho. And it right along where people sit down, and sometimes the one of the staff comes along and takes a fish out of the tank with a fishnet, that&#x27;s the only thing I don&#x27;t like...why couldn&#x27;t they put this anywhere else? I don&#x27;t know\nBUT overall good place, I&#x27;ll still be coming here alot.&quot;,
+                &quot;date&quot;: &quot;1310319951000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;xPqLyYJkM0Bm333WoW1SuQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;xPqLyYJkM0Bm333WoW1SuQ&quot;,
+                &quot;user_id&quot;: &quot;PQdF5ERmxe8Fz1Lo6NOU7Q&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 3,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;I have been to Emerald many times in the past 15 years.  \nThey used to have pretty good dim sum.\n\nNow that I&#x27;m old enough to form my own opinion, my view of them is somewhat tarnished.\n\n1) the dim sum is often recooked and carted so often that it arrives cold\n\n2) the carts have some of the most inefficient routes, such that it is impossible to get the dishes you want unless you get up and hunt them down\n\n3) slow service - it took quite a while to get change for the bill.  i would have thought they wanted a faster turnaround rate.\n\n4) they&#x27;re not exactly cheap for chinese food.\n\n5) this one really bugged me - last time I went, close to end of dim sum, and they cracked out the vacuum and started vacuuming right next to my table.  Not sure about everyone else, but i don&#x27;t particularly want to eat vacuum dust, nor do I enjoy the sights and sounds.&quot;,
+                &quot;date&quot;: &quot;1257189402000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;sfc5ZPcbEcwhAywNM7gPdw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;sfc5ZPcbEcwhAywNM7gPdw&quot;,
+                &quot;user_id&quot;: &quot;uiHXWOoDtIjTWXZOB-mjAA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;A great place for hangover lunch. The food is good and reasonably priced but can add up very quickly. Only a few servers speak English so don&#x27;t expect a1 service.\nVery lively restaurant around lunch time because of dim sum. It gets quite loud and rowdy but that&#x27;s part of the fun. \n\nOverall, it&#x27;s a good place to go for cheap dim sum in the Mississauga area that won&#x27;t disappoint you.&quot;,
+                &quot;date&quot;: &quot;1466004395000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;WmtAkHrtXIr3OOCcHTnxlg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;WmtAkHrtXIr3OOCcHTnxlg&quot;,
+                &quot;user_id&quot;: &quot;3UGXA8DKKQxxI50EOVJKNQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 1,
+                &quot;useful&quot;: 3,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;The phrase \&quot;looks can be deceiving\&quot; certainly applies here. Although the decor is nice with bright lights, white tablecloths and golden chair covers, it&#x27;s ultimate downfall is the food. \n\nThe majority of dim sum items were deep fried. Where were the steamed bamboo baskets and rice noodle rolls? Cart upon cart  of fried food came by multiple times before we even had one rice noodle roll cart. Even the rice noodle roll was disappointing. Good rice noodle rolls have a very thin skin. These were very thick. \n\nI asked one woman pushing a cart what dumplings she had and she said one was a \&quot;shrimp biscuit\&quot;. I was dismayed to find it was one tiny shrimp no bigger than my thumb completely surrounded by ground pork.\n\nThe staff were awful. Apart from yelling at each other from across the room, they were curt when we asked for more hot water and they were not very nice. \n\nOne cart lady got impatient and annoyed when we called her over to our table after she skipped us. After asking for the fried noodles on her cart, she stamped our card, then said she would get us a warm plate. She disappeared, and we didn&#x27;t see her again. We were about to ask someone about this, when another lady came with a plate of noodles. They were microwaved!!!! \n\nI think it&#x27;s safe to say I&#x27;ll never come back here again. There are so many other good dim sum places (Richmond Hill/Markham) that are definitely worth the drive. Do yourself a favour and don&#x27;t eat here.&quot;,
+                &quot;date&quot;: &quot;1383506844000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;8gtjjjHUAffHGrS-UBVjBw&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;8gtjjjHUAffHGrS-UBVjBw&quot;,
+                &quot;user_id&quot;: &quot;7SXMK8xGbTYnxbDhemjmug&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 2,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Meh.  If the ingredients were a little fresher and the recipes are a little healthier, it would be worth a review.  \n\nMSG ME!  (No, please don&#x27;t)&quot;,
+                &quot;date&quot;: &quot;1392487372000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;DMjO0MZoXQjO9T0j35SjOg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;DMjO0MZoXQjO9T0j35SjOg&quot;,
+                &quot;user_id&quot;: &quot;DuzZ68TZWlQ3mALJZ0ASVQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 7,
+                &quot;funny&quot;: 2,
+                &quot;cool&quot;: 4,
+                &quot;text&quot;: &quot;My family are regulars at this place, and we went today again during one of their peak periods (weekends during lunch). It was extremely packed - a pretty long wait time I would assume. Luckily there are perks to being regulars at this restaurant: less wait time, attentive service, and the tea surcharge is waived. \n\nI generally go here because of the hustle &amp; bustle atmosphere and because the dim sum is relatively consistent in quality. Is it the best dim sum I ever tasted? Probably not, but I still enjoy it because it&#x27;s still one of the best, most popular, and packed Chinese restaurants in Mississauga (it&#x27;s always nice to go to a busy restaurant versus a completely dead one in my opinion - it indicates food is always made fresh for customers). If you want the most authentic dim sum experience in this side of town, this place is it! There&#x27;s not many other restaurants that can wheel out fresh &amp; hot food in carts throughout the entire lunch period (many other similar restaurants you have to order off a sheet, so it may take away from the experience if you&#x27;ve never tried this).\n\nIf you&#x27;ve never been to dim sum, I think going here would be a good experience. It&#x27;s nice to have some prior knowledge of some Chinese food if possible. Some of the dishes I order regularly are: XO stir fried rice noodle rolls, spare ribs in black bean sauce, fried crab claw (a bit expensive, ~$5 for 2 but a guilty pleasure for sure), fried seaweed roll.\n\nOnly negatives about this place could be: long wait times, not for people who dislike busy/loud environments, not for extremely starving people (you might have to wait if you can&#x27;t find something you like right away on a cart), specialty/large dishes are expensive, not very wheelchair accessible (I still found a way but the general layout of the restaurant/plaza isn&#x27;t that friendly for wheelchairs)&quot;,
+                &quot;date&quot;: &quot;1343015072000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;Xcl_TsX3VE6L0WS4xIEAZQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;Xcl_TsX3VE6L0WS4xIEAZQ&quot;,
+                &quot;user_id&quot;: &quot;aIqDek9d1fDEgLIAWXMGSA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Nothing special esp for toronto. Probably one of the poorest dim sum i have had in TO. Selection was very poor. Service slow. And they never came to our side with food.&quot;,
+                &quot;date&quot;: &quot;1507389635000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;kUeDmMCfXLEwna38OtFXQg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;kUeDmMCfXLEwna38OtFXQg&quot;,
+                &quot;user_id&quot;: &quot;zWWcik1fRPZviBCQLC26FQ&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;The dim sum here is great. The regular menu not so much. I haven&#x27;t had a dim sum item not taste good so I can&#x27;t make any recommendations. Try anything! Prices are slightly higher than other places but it&#x27;s deserved.\n\nLines can be long.&quot;,
+                &quot;date&quot;: &quot;1304776840000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;sB_b4ltCNHnXGPBGb4T2lQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;sB_b4ltCNHnXGPBGb4T2lQ&quot;,
+                &quot;user_id&quot;: &quot;5i8f_qKmYjBuRODEa_XQMw&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 0,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;Came here for dinner a few days ago. Ordered two dishes from the \&quot;create your own set dinner\&quot; menu - the braised beef brisket and tendon bowl and the soft scrambled eggs with seafood. Came with house soup (老火湯) and dessert (綠豆沙 and orange slices).\n\nThe braised beef was very good, if not a bit oily. The brisket was fall apart tender and the tendon was perfectly cooked - not too mushy and not too crunchy. The inclusion of snow pea shoots was a bit of an unexpected choice of vegetable (I would have expected a root vegetable, like carrots or turnips), but the snow pea shoots ended up being a nice counterbalance to the rich braising liquid.\n\nThe eggs were a bit uneven, with some parts being of perfect consistency and the other parts being a touch overcooked. The seafood (shrimp and scallop) was plentiful and tasty. My only complaint was that the eggs were quite oily (but it&#x27;s kind of to be expected with this dish).\n\nThe house soup was a traditional slow cooked carrot and green turnip soup with preserved mandarin peel and the dessert a standard mung bean soup.\n\nService was on the slow side and they were stingy with the tea leaves. \n\nPrices were reasonable.\n\nOverall an OK option for traditional Cantonese food for local residents... but there are better options if you go more west and obviously WAY better options if you&#x27;re willing to go all the way east to Markham/Scarborough/etc.&quot;,
+                &quot;date&quot;: &quot;1438440814000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;ngZnfc9H8udUSb_MdPGwsg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;ngZnfc9H8udUSb_MdPGwsg&quot;,
+                &quot;user_id&quot;: &quot;_1U_RyYbonRFbTVPLAlWFg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 1,
+                &quot;cool&quot;: 2,
+                &quot;text&quot;: &quot;Whenever my friend and I are in the mood for dim sum, we come here for their discounted dim sum times (9am-11am, 2pm-4pm). The food is always hot, fresh, and delicious. We got pork spare ribs, har gow, shu mai, crab claws, beef balls, tripe, and rice noodle rolls with shrimp. Everything was so good and only came to about $15/person which is great. I&#x27;m definitely coming back here.&quot;,
+                &quot;date&quot;: &quot;1509353411000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;vnyOvMENcqd_fwIxcFEVGg&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;vnyOvMENcqd_fwIxcFEVGg&quot;,
+                &quot;user_id&quot;: &quot;BF7rMYMH6OvJOBIQhsnQvg&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 3,
+                &quot;useful&quot;: 1,
+                &quot;funny&quot;: 0,
+                &quot;cool&quot;: 0,
+                &quot;text&quot;: &quot;You might need to be rude to eat.\n\nEmerald is a Chinese Restaurant that mainly serves as a banquet hall. The chairs are all covered with fake silk seat covers similar to an old banquet hall trying to look newer. This place is geared for very large groups. \n\nThe food is decent but the service is geared towards survival of the fittest. For Dim Sum it seems that you need to make yourself very visible in order to get served. Occupied ladies wheel the carts around with no set predictability or pattern. \&quot;Excuse me can we have some more mustard sauce\&quot;? might be the way you might ask for some sauce. Here, you might have to say \&quot;WHERE IS THE SAUCE?\&quot; \n\nBut if you don&#x27;t mind being rude (because they don&#x27;t) then you might like this place. Try sitting closer to the window if you can as the Dim Sum carts seem to frequent that area more.&quot;,
+                &quot;date&quot;: &quot;1451541002000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;IMyKZvA5IU5W_N6e5EFhaQ&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;IMyKZvA5IU5W_N6e5EFhaQ&quot;,
+                &quot;user_id&quot;: &quot;dWq7yqls-hd8_BRjAeQQ6A&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 4,
+                &quot;useful&quot;: 7,
+                &quot;funny&quot;: 3,
+                &quot;cool&quot;: 3,
+                &quot;text&quot;: &quot;Looking over the reviews, Emerald has mixed ratings. I can understand this. If you&#x27;re looking for a nice sit-down with little interaction with your server: you&#x27;re in the wrong place. If you&#x27;re not very good at saying No, lol you&#x27;re so screwed it&#x27;s not even funny.\n\nEmerald is (as has been described to me) a traditional Chinese Dim Sum place. This means you will have food thrown at you from all the servers, YOU HAVE TO LEARN TO SAY NO IF YOU DON&#x27;T WANT IT. \n\nThere are carts of food making rounds of the huge seating area and they all have different foods on them. Yes sometimes you will see the same cart multiple times, you just have to be patient. The ladies (never seen a dude wheeling the carts) will often not speak English and will automatically put food on your table (for which you will be charged), so you have to say No multiple times. \n\nI highly, HIGHLY recommend going with someone familiar with how these kind of restaurants work or someone that speaks Mandarin. I had no idea what 90% of the food was. Luckily, the friends I went with knew what was going on and ordered for us all. The food is different, so you will have to pass your comfort zone and try new things. Sometimes the food looked like things I&#x27;d find growing between my toenails, but tasted like heaven should taste. Leave your inhibitions at home.\n\nIt is WELL worth it. I&#x27;m now a huge fan of pork dumplings (as seen in other posts) and glazed pork buns! I can even order for myself now without going all doe-eyed in the face of the waiters! (I&#x27;m pretty proud of that)\n\nTL;DR: Go to Emerald with someone that speaks Mandarin or understand restaurants like this. Learn to say No. Leave your inhibitions at home.&quot;,
+                &quot;date&quot;: &quot;1385481742000&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;Review&quot;,
+            &quot;id&quot;: &quot;Y2DEG5BgiIVGdrGOYAEgTA&quot;,
+            &quot;attributes&quot;: {
+                &quot;review_id&quot;: &quot;Y2DEG5BgiIVGdrGOYAEgTA&quot;,
+                &quot;user_id&quot;: &quot;idrp2Gwwarf-b6eOlkHgTA&quot;,
+                &quot;business_id&quot;: &quot;QXAEGFB4oINsVuTFxEYKFQ&quot;,
+                &quot;stars&quot;: 1,
+                &quot;useful&quot;: 2,
+                &quot;funny&quot;: 3,
+                &quot;cool&quot;: 1,
+                &quot;text&quot;: &quot;Went here today for lunch with my mom, who just moved in to the adjacent condominium complex behind the restaurant. \n\nThis. Place. Sucked. I mean really bad.\n\nMy first instinct this was going to be a rough ride was the fact they there was no appetizing aroma either outside or when opening the front doors. My second instinct? The decor... Weird looking yellow chairs, ceiling has water/mold stains and the TV is showing Slice.\n\nWe were taken to our table by a middle-aged Asian man, who seemed to have a real problem speaking any language, as he spoke like Dr. Frankenstein&#x27;s monster. There were other guests who seemed to have the same difficulty. Then another manager, this time a female, approached with a cart of items and asked if we wanted the spare ribs and chicken wings. We said yes, but then realized that she was just going to reheat the ones on the actual cart, that were sitting by the front door. The ribs were lukewarm and the wings were soggy from the reheat.  \n\nNow, as for the menu... If you eat in as opposed to takeout, there is a price hike, supposedly because you are getting more food, so don&#x27;t be surprised by the $15 chicken fried rice and about the same for curry vegetables.\n\nThe rice was just plain crap. No taste or color and the cabbage was slimy and not crunchy in the rice. The vegetables were the size of my fist (exaggerated), but damn folks, could you not cut them down to a manageable size?!\n\nAll that and I&#x27;m now $40 in the hole. No tip either, since we  had to pack our own doggy bag and took home whatever was left as to not waste and/or try to shovel it off to someone else. Failing that, trying to recook it back to some forms of dignity.\n\nShame on whoever cooks the food there, seriously.\n\nThe only plus? The cashier was real cute.&quot;,
+                &quot;date&quot;: &quot;1441499710000&quot;
+            }
+        }
+    ],
+    &quot;meta&quot;: {
+        &quot;pagination&quot;: {
+            &quot;page&quot;: 1,
+            &quot;pages&quot;: 3048,
+            &quot;count&quot;: 152387
+        }
+    }
+}</pre>
+              </div>
+            </div>
+
+            
+              
+                <div class="tabbable">
+                  
+                    <ul class="nav nav-tabs form-switcher">
+                      <li>
+                        <a name='html-tab' href="#post-object-form" data-toggle="tab">HTML form</a>
+                      </li>
+                      <li>
+                        <a name='raw-tab' href="#post-generic-content-form" data-toggle="tab">Raw data</a>
+                      </li>
+                    </ul>
+                  
+
+                  <div class="well tab-content">
+                    
+                      <div class="tab-pane" id="post-object-form">
+                        
+                          <form action="/review/" method="POST" enctype="multipart/form-data" class="form-horizontal" novalidate>
+                            <fieldset>
+                              <input type="hidden" name="csrfmiddlewaretoken" value="CIInqn0xTx8HeSq4Gzg1YCzIUeMgqqw9N7uzAQMYCm8o7QHXHNqJi1bpQhrHMS0H">
+                              
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Review id
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="review_id" class="form-control" type="text"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+  
+
+  
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Stars
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="stars" class="form-control" type="number"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Useful
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="useful" class="form-control" type="number"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Funny
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="funny" class="form-control" type="number"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Cool
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="cool" class="form-control" type="number"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Text
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="text" class="form-control" type="text"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+  
+    <div class="form-group ">
+  
+    <label class="col-sm-2 control-label ">
+      Date
+    </label>
+  
+
+  <div class="col-sm-10">
+    <input name="date" class="form-control" type="text"  value="" >
+
+    
+
+    
+  </div>
+</div>
+
+  
+
+
+                              <div class="form-actions">
+                                <button class="btn btn-primary js-tooltip" title="Make a POST request on the Review List resource">POST</button>
+                              </div>
+                            </fieldset>
+                          </form>
+                        
+                      </div>
+                    
+
+                    <div class="tab-pane" id="post-generic-content-form">
+                      
+                        <form action="/review/" method="POST" class="form-horizontal">
+                          <fieldset>
+                            
+
+
+  <div class="form-group">
+    <label for="id__content_type" class="col-sm-2 control-label">Media type:</label>
+    <div class="col-sm-10">
+      <select name="_content_type" data-override="content-type" id="id__content_type" class="form-control">
+  <option value="application/vnd.api+json" selected>application/vnd.api+json</option>
+
+  <option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option>
+
+  <option value="multipart/form-data">multipart/form-data</option>
+
+</select>
+      <span class="help-block"></span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="id__content" class="col-sm-2 control-label">Content:</label>
+    <div class="col-sm-10">
+      <textarea name="_content" cols="40" rows="10" data-override="content" id="id__content" class="form-control">
+{
+    &quot;data&quot;: {
+        &quot;type&quot;: &quot;Review&quot;,
+        &quot;id&quot;: null,
+        &quot;attributes&quot;: {
+            &quot;review_id&quot;: &quot;&quot;,
+            &quot;stars&quot;: null,
+            &quot;useful&quot;: null,
+            &quot;funny&quot;: null,
+            &quot;cool&quot;: null,
+            &quot;text&quot;: &quot;&quot;,
+            &quot;date&quot;: &quot;&quot;
+        }
+    }
+}</textarea>
+      <span class="help-block"></span>
+    </div>
+  </div>
+
+
+                            <div class="form-actions">
+                              <button class="btn btn-primary js-tooltip" title="Make a POST request on the Review List resource">POST</button>
+                            </div>
+                          </fieldset>
+                        </form>
+                      
+                    </div>
+                  </div>
+                </div>
+              
+
+              
+            
+          
+        </div><!-- /.content -->
+      </div><!-- /.container -->
+    </div><!-- ./wrapper -->
+
+    
+      <div class="modal fade" id="filtersModal" tabindex="-1" role="dialog" aria-labelledby="filters" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Filters</h4>
+    </div>
+      <div class="modal-body">
+          
+          
+          
+<h2>Search</h2>
+<form class="form-inline">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control" style="width: 350px" name="filter[search]" value="">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</button>
+      </span>
+    </div>
+  </div>
+</form>
+
+          
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+      <script>
+        window.drf = {
+          csrfHeaderName: "X-CSRFTOKEN",
+          csrfToken: "CIInqn0xTx8HeSq4Gzg1YCzIUeMgqqw9N7uzAQMYCm8o7QHXHNqJi1bpQhrHMS0H"
+        };
+      </script>
+      <script src="/static/rest_framework/js/jquery-3.5.1.min.js"></script>
+      <script src="/static/rest_framework/js/ajax-form.js"></script>
+      <script src="/static/rest_framework/js/csrf.js"></script>
+      <script src="/static/rest_framework/js/bootstrap.min.js"></script>
+      <script src="/static/rest_framework/js/prettify-min.js"></script>
+      <script src="/static/rest_framework/js/default.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('form').ajaxForm();
+        });
+      </script>
+    
+
+  </body>
+  
+</html>
