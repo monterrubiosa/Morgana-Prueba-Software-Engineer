@@ -1,0 +1,55 @@
+from django.db import models
+from jsonfield import JSONField
+
+# Create your models here.
+
+class Business(models.Model):
+    business_id = models.CharField(primary_key = True, max_length=200)
+    name = models.CharField(max_length=200)
+    address = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
+    state = models.CharField(max_length=200)
+    postal_code = models.CharField(max_length=200)
+    latitude = models.IntegerField()
+    longitude = models.IntegerField()
+    stars = models.IntegerField()
+    review_count = models.IntegerField()
+    is_open = models.IntegerField()
+    attributes = JSONField()
+    categories = models.CharField(max_length=200)
+    hours = JSONField()
+
+class User(models.Model):
+    user_id = models.CharField(primary_key = True, max_length=200)
+    name = models.CharField(max_length=200)
+    review_count = models.IntegerField()
+    yelping_since = models.CharField(max_length=200)
+    useful = models.IntegerField()
+    funny = models.IntegerField()
+    cool = models.IntegerField()
+    elite = models.CharField(max_length=200)
+    friends = models.CharField(max_length=200)
+    fans = models.IntegerField()
+    average_stars = models.IntegerField()
+    compliment_hot = models.IntegerField()
+    compliment_more = models.IntegerField()
+    compliment_profile = models.IntegerField()
+    compliment_cute = models.IntegerField()
+    compliment_list = models.IntegerField()
+    compliment_note = models.IntegerField()
+    compliment_plain = models.IntegerField()
+    compliment_cool = models.IntegerField()
+    compliment_funny = models.IntegerField()
+    compliment_writer = models.IntegerField()
+    compliment_photos = models.IntegerField()
+
+class Review(models.Model):
+    review_id = models.CharField(primary_key = True, max_length=200)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    business = models.ForeignKey(Business, on_delete=models.CASCADE)
+    stars = models.IntegerField()
+    useful = models.IntegerField()
+    funny = models.IntegerField()
+    cool = models.IntegerField()
+    text = models.CharField(max_length=200)
+    date = models.CharField(max_length=200)
